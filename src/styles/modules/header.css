@@ -1,0 +1,15 @@
+.main-header {
+  background-color: var(--color-white);
+  color: var(--color-dark-red);
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-medium);
+}
+
+.main-header .logo {
+  margin-right: 15px;
+  max-width: 120px;
+  height: auto;
+}

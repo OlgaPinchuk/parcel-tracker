@@ -1,0 +1,41 @@
+.home {
+  background-image: url("../../media/images/bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.parcels-container {
+  overflow-y: scroll;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+.status-icon {
+  display: block;
+  width: 120px;
+  height: 31px;
+  background-image: url("../../media/images/icons/info-received.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/* .delivered {
+  background-image: url("/icons/delivered.png");
+}
+
+.ready-for-pickup {
+  background-image: url("../../media/images/icons/ready-to-pickup.png");
+}
+
+.on-the-way {
+  background-image: url("../../media/images/icons/in-progress.png");
+}
+
+.order-info-received {
+  background-image: url("../../media/images/icons/info-received.png");
+} */

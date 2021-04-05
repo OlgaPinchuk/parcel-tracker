@@ -1,0 +1,45 @@
+.parcel-details {
+  padding: 30px;
+  background-image: url("../../media/images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parcel {
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+}
+
+.back-button {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 25px;
+  height: 25px;
+  background: transparent url("../../media/images/back-btn.png") no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+.parcel-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subheader {
+  margin-top: 11px;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+}
+.order-num {
+  color: var(--color-dark-red);
+}
