@@ -10,6 +10,7 @@ import { Parcel } from "../src/pages/Parcel";
 import SearchResults from "../src/pages/SearchResults";
 import "./styles/style.css";
 
+
 function App() {
   return (
     <div className="App">
