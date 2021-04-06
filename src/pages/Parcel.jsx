@@ -20,7 +20,6 @@ export const Parcel = ({ match, history }) => {
     location_name,
     location_coordinate_latitude: lat,
     location_coordinate_longitude: lng,
-    location_id,
     notes,
     verification_required,
   } = currentParcel;
@@ -66,7 +65,7 @@ export const Parcel = ({ match, history }) => {
             <p>{verification_required}</p>
           </div>
         </div>
-        <Map location={location} zoomLevel={17} />
+        <Map location={location} zoomLevel={15} />
       </div>
     </div>
   );
