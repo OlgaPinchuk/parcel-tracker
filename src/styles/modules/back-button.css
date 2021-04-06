@@ -1,0 +1,8 @@
+.back-button {
+  margin-right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent url("../../media/images/back-btn.png") no-repeat;
+  background-size: contain;
+  border: none;
+}

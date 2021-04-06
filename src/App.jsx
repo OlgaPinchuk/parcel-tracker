@@ -7,9 +7,8 @@ import { RecoilRoot } from "recoil";
 import { Header } from "../src/components/Header";
 import { Home } from "../src/pages/Home";
 import { Parcel } from "../src/pages/Parcel";
-import SearchResults from "../src/pages/SearchResults";
+import { SearchResults } from "../src/pages/SearchResults";
 import "./styles/style.css";
-
 
 function App() {
   return (
@@ -21,11 +20,11 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <Route component={Home} path="/" exact></Route>
               <Route component={Parcel} path="/parcels/:parcel_id" />
+              <Route
+                component={SearchResults}
+                path="/results/:query"
+              ></Route>
             </Suspense>
-            {/* <Route
-              component={SearchResults}
-              path="/parcels/results/:query"
-            ></Route> */}
           </Switch>
         </BrowserRouter>
       </RecoilRoot>

@@ -3,16 +3,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .parcels-container {
-  overflow-y: scroll;
-  padding: 20px;
-  margin: 20px auto;
-  width: 80vw;
-  height: 80vh;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
+  height: 74vh;
 }
 
 .status-icon {

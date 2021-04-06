@@ -1,11 +1,16 @@
 .parcel-info {
-  margin-bottom: 10px;
-  padding: 15px;
-  font-size: 22px;
+  margin-bottom: 0.7rem;
+  padding: 0;
   font-weight: 700;
+  font-size: 0.9rem;
 }
 .parcel-description {
- display: grid;
-    grid-template-columns: 30% 15% 1fr;
+  display: grid;
+  grid-template-columns: 30% 15% 1fr;
 }
 
+@media (max-width: 769px) {
+  .parcel-description {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

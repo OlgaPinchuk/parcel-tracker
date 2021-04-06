@@ -1,0 +1,24 @@
+.search-results {
+  background-image: url("../../media/images/bg-search.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.parcel-list {
+  position: relative;
+  height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--color-dark-red);
+}
+
+.back-button {
+  left: 0.7rem;
+  top: 1.5rem;
+}
