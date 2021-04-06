@@ -1,4 +1,5 @@
 .main-header {
+  margin: 0 1rem;
   padding: var(--space-medium);
   background-color: var(--color-white);
   color: var(--color-dark-red);
@@ -25,7 +26,6 @@
     font-size: 1.1rem;
   }
 }
-
 
 @media (orientation: landscape) and (max-width: 737px) {
   .main-header .logo {

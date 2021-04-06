@@ -33,7 +33,7 @@ a:hover {
   width: 80vw;
   height: 80vh;
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius:  1.2rem;
+  border-radius: 1.2rem;
   overflow-y: scroll;
 }
 
@@ -42,12 +42,6 @@ a:hover {
     font-size: var(--font-size-small);
   }
 }
-
-/* @media (min-width: 1023px) {
-  html {
-    font-size: 30px;
-  }
-} */
 
 @media (min-width: 1023px) {
   html {

@@ -1,4 +1,4 @@
-// NPM Package
+// NPM Packages
 import { useRecoilValue } from "recoil";
 
 // Components
@@ -10,8 +10,6 @@ export const Home = () => {
   //State
   const parcels = useRecoilValue(parcelStateSelector);
 
-  //const [parcels, setParcels] = useRecoilState(parcelsState);
-
   // Components
   const ParcelsArray = parcels.map((item) => (
     <ParcelCard key={item.parcel_id} parcel={item} />
@@ -20,7 +18,15 @@ export const Home = () => {
   return (
     <div className="home">
       <SearchBar />
-      <div className="parcels-container container">{ParcelsArray}</div>
+      <div className="parcels-container container">
+        <div className="list-header">
+          <p>Status</p>
+          <p>Sender</p>
+          <p>ID</p>
+          <p>ETA</p>
+        </div>
+        {ParcelsArray}
+      </div>
     </div>
   );
 };
