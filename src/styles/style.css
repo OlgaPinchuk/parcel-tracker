@@ -8,8 +8,11 @@
 /* Pages */
 @import url("./pages/home.css");
 @import url("./pages/parcel.css");
+@import url("./pages/search-results.css");
 
 /* Modules */
 @import url("./modules/header.css");
 @import url("./modules/parcel-card.css");
 @import url("./modules/map.css");
+@import url("./modules/search-bar.css");
+@import url("./modules/back-button.css");

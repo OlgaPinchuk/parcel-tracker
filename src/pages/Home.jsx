@@ -4,12 +4,12 @@ import { useRecoilValue } from "recoil";
 // Components
 import { ParcelCard } from "../components/ParcelCard";
 import { parcelStateSelector } from "../state/parcelsData";
-
+import { SearchBar } from "../components/SearchBar";
 
 export const Home = () => {
   //State
- 
   const parcels = useRecoilValue(parcelStateSelector);
+
   //const [parcels, setParcels] = useRecoilState(parcelsState);
 
   // Components
@@ -19,7 +19,8 @@ export const Home = () => {
 
   return (
     <div className="home">
-        <div className="parcels-container">{ParcelsArray}</div>
+      <SearchBar />
+      <div className="parcels-container container">{ParcelsArray}</div>
     </div>
   );
 };

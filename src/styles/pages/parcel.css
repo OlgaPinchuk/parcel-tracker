@@ -1,49 +1,70 @@
 .parcel-details {
-  padding: 30px;
+  padding: 1.2rem;
   background-image: url("../../media/images/bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .parcel {
-  position: relative;
-  padding: 20px;
-  margin: 20px auto;
-  width: 80vw;
-  height: 80vh;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 20px;
-
+  height: 72vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .back-button {
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  width: 25px;
-  height: 25px;
-  background: transparent url("../../media/images/back-btn.png") no-repeat;
-  background-size: contain;
-  border: none;
+  left: 0.7rem;
+  top: 1.5rem;
 }
 
 .parcel-header {
-  margin-bottom: 30px;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
 .subheader {
-  margin-top: 11px;
+  margin-top: 0.7rem;
   font-weight: 700;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 30%);
+  grid-column-gap: 1.5%;
 }
 .order-num {
   color: var(--color-dark-red);
+}
+
+@media (max-width: 480px) {
+  .parcel {
+    justify-content: flex-start;
+  }
+  .parcel-header {
+    font-size: 1.5rem;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1.3rem;
+  }
+  .subheader {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (orientation: landscape), (max-width: 321px) {
+  .parcel {
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+  .parcel-header {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 }
