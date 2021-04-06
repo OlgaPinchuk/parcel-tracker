@@ -1,0 +1,56 @@
+.home {
+  background-image: url("../../media/images/bg-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.parcels-container {
+  height: 74vh;
+}
+
+.status-icon {
+  display: block;
+  width: 3rem;
+  height: 31px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.delivered {
+  background-image: url("../../media/images/icons/delivered.png");
+}
+
+.ready-for-pickup {
+  background-image: url("../../media/images/icons/ready-to-pickup.png");
+}
+
+.on-the-way {
+  background-image: url("../../media/images/icons/in-progress.png");
+}
+
+.order-info-received {
+  background-image: url("../../media/images/icons/info-received.png");
+}
+
+.list-header {
+  margin-bottom: 1rem;
+  color: var(--color-dark-red);
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 18% 26% 20% 1fr;
+  align-items: center;
+}
+
+.list-header p:first-child {
+  width: 3rem;
+}
+
+@media (max-width: 769px) {
+  .list-header {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

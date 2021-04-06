@@ -1,0 +1,65 @@
+.parcel-details {
+  padding: 1.2rem;
+  background-image: url("../../media/images/bg-card.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.parcel {
+  height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.parcel-header {
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.subheader {
+  margin-top: 0.7rem;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-column-gap: 1.5%;
+}
+.order-num {
+  color: var(--color-dark-red);
+}
+
+@media (max-width: 480px) {
+  .parcel {
+    justify-content: flex-start;
+  }
+  .parcel-header {
+    font-size: 1.5rem;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1.3rem;
+  }
+  .subheader {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (orientation: landscape), (max-width: 321px) {
+  .parcel {
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+  .parcel-header {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,12 @@
+:root {
+    /* Colors */
+  --color-grey: #656d78;
+  --color-dark-red: #e2231a;
+  --color-white: #ffffff;
+  --color-dark-grey: #333333;
+
+
+  /* Font sizes */
+  --font-size-small: 14px;
+  --font-size-big: 24px;
+}
