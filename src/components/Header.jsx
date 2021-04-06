@@ -1,3 +1,4 @@
+// NPM Packages
 import { Link, useLocation, useHistory } from "react-router-dom";
 
 // Components
@@ -7,7 +8,7 @@ export const Header = () => {
   const logo = require(`../media/images/logo.png`).default;
   const { pathname } = useLocation();
   const history = useHistory();
-  
+
   return (
     <header className="main-header">
       {pathname !== "/" && <BackButton history={history} />}

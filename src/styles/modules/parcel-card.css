@@ -1,16 +1,29 @@
 .parcel-info {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
   padding: 0;
   font-weight: 700;
   font-size: 0.9rem;
 }
+
 .parcel-description {
   display: grid;
-  grid-template-columns: 30% 15% 1fr;
+  grid-template-columns: 18% 26% 20% 1fr;
+  align-items: center;
+}
+.eta {
+  min-width: max-content;
 }
 
 @media (max-width: 769px) {
   .parcel-description {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .parcel-description,
+  .list-header {
+    font-size: 0.8rem;
+  }
+
+  .parcel-description > * {
+    margin-right: 0.1rem;
   }
 }

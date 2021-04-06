@@ -1,6 +1,7 @@
+// NPM Packages
 import GoogleMapReact from "google-map-react";
-import { LocationPin } from './LocationPin';
- 
+import { LocationPin } from "./LocationPin";
+
 const { REACT_APP_MAP_KEY } = process.env;
 
 export const Map = ({ location, zoomLevel }) => (

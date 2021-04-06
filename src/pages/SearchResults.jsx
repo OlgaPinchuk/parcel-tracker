@@ -1,4 +1,4 @@
-// NPM Package
+// NPM Packages
 import { useState } from "react";
 import { useRecoilValue } from "recoil";
 
@@ -35,7 +35,16 @@ export const SearchResults = ({ match, history }) => {
     <div id="results" className="search-results">
       <section className="container parcel-list">
         {CardsArray.length > 0 ? (
-          CardsArray
+          <>
+            <div className="list-header">
+              <p>Status</p>
+              <p>Sender</p>
+              <p>ID</p>
+              <p>ETA</p>
+            </div>
+
+            {CardsArray}
+          </>
         ) : (
           <h2 class="no-results">No results</h2>
         )}
