@@ -14,7 +14,6 @@ export const SearchBar = () => {
   // Methods
   function onSearch(event) {
     event.preventDefault();
-
     history.push(`/results/${query}`);
   }
 

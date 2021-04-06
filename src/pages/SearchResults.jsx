@@ -3,12 +3,12 @@ import { useState } from "react";
 import { useRecoilValue } from "recoil";
 
 // Project files
-import { ParcelCard } from "../components/ParcelCard";
+import { ParcelsList } from "../components/ParcelsList";
 import { parcelStateSelector } from "../state/parcelsData";
 
 export const SearchResults = ({ match, history }) => {
   // State
-  const [sortKey, setSortKey] = useState("parcel_id");
+  const sortKey = useState("parcel_id");
   const parcels = useRecoilValue(parcelStateSelector);
 
   // Consts
@@ -26,29 +26,16 @@ export const SearchResults = ({ match, history }) => {
     a[sortKey] > b[sortKey] ? 1 : -1
   );
 
-  // Components
-  const CardsArray = sortedResults.map((item) => (
-    <ParcelCard key={item.id} parcel={item} />
-  ));
 
   return (
     <div id="results" className="search-results">
-      <section className="container parcel-list">
-        {CardsArray.length > 0 ? (
-          <>
-            <div className="list-header">
-              <p>Status</p>
-              <p>Sender</p>
-              <p>ID</p>
-              <p>ETA</p>
-            </div>
-
-            {CardsArray}
-          </>
-        ) : (
-          <h2 class="no-results">No results</h2>
-        )}
-      </section>
+      {sortedResults.length > 0 ? (
+        <ParcelsList parcels={sortedResults} />
+      ) : (
+        <div className="container">
+          <h2 className="no-results">No results</h2>
+        </div>
+      )}
     </div>
   );
 };
