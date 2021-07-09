@@ -1,19 +1,31 @@
 // NPM Packages
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Suspense } from "react";
-import { RecoilRoot } from "recoil";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 // Project files
 import { Header } from "../src/components/Header";
 import { Home } from "../src/pages/Home";
-import { Parcel } from "../src/pages/Parcel";
-import { SearchResults } from "../src/pages/SearchResults";
+import Parcel from "../src/pages/Parcel";
+import SearchResults from "../src/pages/SearchResults";
+import ParcelsLoader from './components/ParcelsLoader';
 import "./styles/style.css";
 
-function App() {
+//Global state
+import rootReducer from './behavior/rootReducer';
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+
+const App = () => {
+  
   return (
+    <Provider store={store}>
+      <ParcelsLoader/>
     <div className="App">
-      <RecoilRoot>
         <BrowserRouter>
           <Header />
           <Switch>
@@ -27,8 +39,8 @@ function App() {
             </Suspense>
           </Switch>
         </BrowserRouter>
-      </RecoilRoot>
     </div>
+    </Provider>
   );
 }
 

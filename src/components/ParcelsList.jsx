@@ -1,7 +1,14 @@
+// NPM Packages
+import { connect } from "react-redux";
+
 // Project files
 import { ParcelCard } from "./ParcelCard";
 
 export const ParcelsList = ({ parcels }) => {
+
+  if(!parcels) {
+    return null;
+  }
   const ParcelsArray = parcels.map((item) => (
     <ParcelCard key={item.parcel_id} parcel={item} />
   ));
@@ -17,3 +24,7 @@ export const ParcelsList = ({ parcels }) => {
     </div>
   );
 };
+
+export default connect(
+  ({ parcels }) => ({ parcels })
+)(ParcelsList);

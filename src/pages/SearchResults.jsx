@@ -1,15 +1,20 @@
 // NPM Packages
 import { useState } from "react";
-import { useRecoilValue } from "recoil";
+import { connect } from "react-redux";
 
-// Project files
+//Global state
+import { getParcels } from "../behavior/parcels"
+
+// Components
 import { ParcelsList } from "../components/ParcelsList";
-import { parcelStateSelector } from "../state/parcelsData";
 
-export const SearchResults = ({ match, history }) => {
+
+ const SearchResults = ({ match, history, parcels }) => {
   // State
   const sortKey = useState("parcel_id");
-  const parcels = useRecoilValue(parcelStateSelector);
+  if(!parcels) {
+    return null;
+  }
 
   // Consts
   const query = match.params.query.toUpperCase();
@@ -39,3 +44,8 @@ export const SearchResults = ({ match, history }) => {
     </div>
   );
 };
+
+export default connect(
+  ({ parcels }) => ({ parcels }),
+  { getParcels }
+)(SearchResults);

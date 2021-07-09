@@ -1,15 +1,15 @@
 // NPM Packages
-import { useRecoilValue } from "recoil";
+import { connect } from "react-redux";
 
 // Components
 import { Map } from "../components/Map";
 
 // Global state
-import { parcelStateSelector } from "../state/parcelsData";
+import { getParcels } from "../behavior/parcels";
 
-export const Parcel = ({ match, history }) => {
+const Parcel = ({ match, history, parcels }) => {
+  if(!parcels) return null;
   const routerID = match.params.parcel_id;
-  const parcels = useRecoilValue(parcelStateSelector);
   const currentParcel = parcels.find((item) => item.parcel_id === routerID);
 
   const {
@@ -72,3 +72,8 @@ export const Parcel = ({ match, history }) => {
     </div>
   );
 };
+
+export default connect(
+  ( parcels ) => ( parcels),
+  { getParcels }
+)(Parcel);
